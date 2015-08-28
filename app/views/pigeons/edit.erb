@@ -3,6 +3,31 @@
 <h1>Edit Pigeon</h1>
 
 <!-- form goes here -->
+<form action="/pigeons/<%= @pigeon[:id] %>" method="post">
+  <input type="hidden" name="_method" method="PATCH">
+
+  <div>
+    <label for="pigeon_name">Name</label>
+    <input type="text" name="pigeon[name]" id="pigeon_name" placeholder="<%= @pigeon[:name]%>">
+  </div>
+
+  <div>
+    <label for="pigeon_color">Color</label>
+    <input type="text" name="pigeon[color]" id="pigeon_color" placeholder="<%= @pigeon[:color]%>">
+  </div>
+
+  <div>
+    <label for="pigeon_lives">Lives</label>
+    <input type="text" name="pigeon[lives]" id="pigeon_lives" placeholder="<%= @pigeon[:lives]%>">
+  </div>
+
+  <div>
+    <label for="pigeon_gender">Gender</label>
+    <input type="text" name="pigeon[gender]" id="pigeon_gender" placeholder="<%= @pigeon[:gender]%>">
+  </div>
+
+  <input type="submit" value="Submit">
+</form>
 
 <a class="button" href="/pigeons">Cancel</a>
 

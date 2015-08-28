@@ -4,6 +4,30 @@
 
 <!-- form goes here -->
 
+<form action="/pigeons" method="post">
+  <div>
+    <label for="pigeon_name">Name</label>
+    <input type="text" name="pigeon[name]" id="pigeon_name">
+  </div>
+
+  <div>
+    <label for="pigeon_color">Color</label>
+    <input type="text" name="pigeon[color]" id="pigeon_color">
+  </div>
+
+  <div>
+    <label for="pigeon_lives">Lives</label>
+    <input type="text" name="pigeon[lives]" id="pigeon_lives">
+  </div>
+
+  <div>
+    <label for="pigeon_gender">Gender</label>
+    <input type="text" name="pigeon[gender]" id="pigeon_gender">
+  </div>
+
+  <input type="submit" value="Create">
+</form>
+
 <a class="button" href="/pigeons">Cancel</a>
 
 <%= erb :'layouts/_footer' %>
